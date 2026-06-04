@@ -94,21 +94,9 @@ The validated schema is consumed by Base44, which produces a deployed applicatio
 
 ```
 app-compiler/
-├── backend/
-│   ├── stages/
-│   │   ├── stage1_intent.js       # Intent extraction
-│   │   ├── stage2_design.js       # System design
-│   │   ├── stage3_schema.js       # Parallel schema generation
-│   │   └── stage4_validate.js     # Validation & repair engine
-│   ├── eval/
-│   │   └── run_eval.js            # Evaluation dataset runner
-│   ├── server.js                  # Express server with SSE streaming
-│   ├── eval_log.jsonl             # Auto-generated run logs
-│   └── .env                       # ANTHROPIC_API_KEY
-└── frontend/
-    ├── src/
-    │   └── App.jsx                # Pipeline UI with live stage viewer
-    └── package.json
+├── src/
+│   └── App.jsx                # Pipeline UI with live stage viewer
+└── package.json
 ```
 
 ---
@@ -129,19 +117,12 @@ app-compiler/
 
 ## Running locally
 
-**Prerequisites:** Node.js v18+, an Anthropic API key
+**Prerequisites:** Node.js v18+
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/app-compiler
-cd app-compiler
-
-# Backend
-cd backend
-npm install
-cp .env.example .env
-# Add your ANTHROPIC_API_KEY to .env
-node server.js
+git clone https://github.com/Bhanu2k04/NexusCoreCompiler
+cd NexusCoreCompiler
 
 # Frontend (new terminal)
 cd frontend
